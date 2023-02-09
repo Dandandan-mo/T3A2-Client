@@ -78,7 +78,7 @@ Have not developed due to time limits.
 * Products page
 
   ![Products page](Production_screenshots/product-m.png)
-  ![Products page](Production_screenshots/product-t.png)
+  ![Products page](Production_screenshots/product-t2.png)
   ![Products page](Production_screenshots/product-d.png)
 
 * Cart page (quantity validation shown in mobile and tablet viewports)
