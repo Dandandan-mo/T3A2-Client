@@ -70,26 +70,31 @@ Have not developed due to time limits.
 ## Screenshots of website (Responsive)
 
 * Home page (search function shown in desktop viewport)
+
   ![Home page](Production_screenshots/home-m.png)
   ![Home page](Production_screenshots/home-t.png)
   ![Home page](Production_screenshots/home-d.png)
   
 * Products page
+
   ![Products page](Production_screenshots/product-m.png)
   ![Products page](Production_screenshots/product-t.png)
   ![Products page](Production_screenshots/product-d.png)
 
 * Cart page (quantity validation shown in mobile and tablet viewports)
+
   ![Cart page](Production_screenshots/cart-m.png)
   ![Cart page](Production_screenshots/cart-t.png)
   ![Cart page](Production_screenshots/cart-d.png)
   
 * Checkout page (input validation shown in tablet viewport)
+
   ![Checkout page](Production_screenshots/checkout-m.png)
   ![Checkout page](Production_screenshots/checkout-t.png)
   ![Checkout page](Production_screenshots/checkout-d.png)
 
 * Confirmation page
+
   ![Confirmation page](Production_screenshots/confirmation-m.png)
   ![Confirmation page](Production_screenshots/confirmation-t.png)
   ![Confirmation page](Production_screenshots/confirmation-d.png)
