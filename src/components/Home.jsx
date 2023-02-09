@@ -16,22 +16,22 @@ const viewWidth = () => {
   const textStyle = {
     textAlign:"center",
     margin: "20px",
-    fontSize:"6vw",
+    fontSize:"2rem",
     fontFamily: "'Patrick Hand', cursive"
   }
 
   const paragraphStyle ={
-    margin: "0 25px 30px 30px",
-    fontSize: "4vw"
+    margin: "0 2rem 2rem 2rem",
+    fontSize: "1rem"
   }
 
   const changeFontSize =() => {
   if (isDesktop) {
-    textStyle.fontSize = "3vw"
-    paragraphStyle.fontSize = "1.5vw"
+    textStyle.fontSize = "3rem"
+    paragraphStyle.fontSize = "1.5rem"
   } else if (isTablet) {
-    paragraphStyle.fontSize = "2.5vw"
-    textStyle.fontSize = "4vw"
+    paragraphStyle.fontSize = "1.5rem"
+    textStyle.fontSize = "2.5rem"
   } 
 }
   changeFontSize()
@@ -52,8 +52,8 @@ const Home = ({products}) => {
             <div style={{backgroundImage: "url(https://i.postimg.cc/ryNFfW8Q/Banner-1.jpg)", height:"20vw", backgroundSize:"100vw"}}>
                 <h3 style={{position:"relative", zIndex: "-1"}}>Smoonypaws Banner</h3>
             </div>
-            <h5 style={viewWidth().textStyle}>Shop Info</h5>
-            <p id="intro" style={viewWidth().paragraphStyle}>Cute handmade & Self-designed cat stickers, sharing our four adorable kitties. The designs are inspired by our 4 cats😻: QiQi, PeterPan, Taro and Hana</p>
+            <h5 style={viewWidth().textStyle}>About Us</h5>
+            <p id="intro" style={viewWidth().paragraphStyle}>Smoonypaws is an original-brand sticker shop that sells cute handmade & Self-designed cat stickers. The designs are inspired by our 4 adorable cats😻: QiQi, PeterPan, Taro and Hana</p>
         </div>
         <div>
             <h2 id="products" style={viewWidth().textStyle}>Products</h2>

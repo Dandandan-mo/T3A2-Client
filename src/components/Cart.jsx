@@ -21,12 +21,10 @@ const Cart = ({cart, setCart, cartId}) => {
     }
     fetchCart()
   }, [])
-  
-  // get an array of all the subtotals
-  const subtotals = []
 
   // When cart is updated, update the total payable
   useEffect(() => {
+    const subtotals = []
     cart.forEach(item => {
       const subtotal = item.price * item.quantity
       subtotals.push(subtotal)

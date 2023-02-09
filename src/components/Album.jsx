@@ -15,15 +15,15 @@ const viewWidth = () => {
 
 
   const textStyle = {
-    fontSize: "6vw",
+    fontSize: "1.5rem",
     fontFamily: "'Patrick Hand', cursive"
   }
 
 const changeFontSize =() => {
   if (isDesktop) {
-    textStyle.fontSize = "2vw"
+    textStyle.fontSize = "2rem"
   } else if (isTablet) {
-    textStyle.fontSize = "3vw"
+    textStyle.fontSize = "1.75rem"
   } 
 }
   changeFontSize()
