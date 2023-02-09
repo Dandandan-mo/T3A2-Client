@@ -85,6 +85,28 @@ const App = () => {
     setCart_Count(countAll)
   }
 
+  // fetch cart data from db with the cartId saved in local storage
+  async function fetchCart() {
+    if (cartId) {
+    const res = await fetch(`https://t3a2-server-production.up.railway.app/carts/${cartId}`)
+    const data = await res.json()
+    setCart(data.items)
+    } else {
+      setCart([])
+    }
+  }
+
+  // calculate the total payable with the cart item details
+  function calcTotal() {
+    const subtotals = []
+    cart.forEach(item => {
+      const subtotal = item.price * item.quantity
+      subtotals.push(subtotal)
+    })
+    const payable = subtotals.reduce((partialSum, additional) => partialSum + additional, 0)
+    return payable
+  }
+
   const ProductWrapper = () => {
     const { id } = useParams()
     const product = products.find(product => product._id == id)
@@ -110,8 +132,8 @@ const App = () => {
         <Route path='/' element={<Home products={products}/>}/>
         <Route path='/product-detail/:id' element={<ProductWrapper/>}/>
         <Route path='/order-history' element={<OrderHistory/>} />
-        <Route path='/cart' element={<Cart cart={cart} setCart={setCart} cartId={cartId}/> } />
-        <Route path='/checkout' element={<Checkout cartId={cartId}/>}/>
+        <Route path='/cart' element={<Cart cart={cart} setCart={setCart} cartId={cartId} calcTotal={calcTotal} fetchCart={fetchCart}/> } />
+        <Route path='/checkout' element={<Checkout cartId={cartId} cart={cart} fetchCart={fetchCart} calcTotal={calcTotal}/>}/>
         <Route path='/confirmation' element={<Confirmation setCart={setCart}/>}/>
         <Route path='*' element={<h3>Page Not Found!</h3>} />
       </Routes>

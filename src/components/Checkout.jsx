@@ -24,34 +24,22 @@ const newAddress = {
   postcode: ""
 }
 
-const Checkout = ({ cartId }) => {
+const Checkout = ({ cartId, cart, fetchCart, calcTotal }) => {
 
-  const [readyCart, setReadyCart] = useState([])
   const [finalTotal, setFinalTotal] = useState()
   const [address, setAddress] = useState(newAddress)
 
   // validate user input of address with react hook form
   const { register, handleSubmit, watch, formState: { errors } } = useForm()
 
-  let sum = []
-
   // fetch cart data for the display of purchase summary
   useEffect(() => {
-    async function fetchReadyCart() {
-      const res = await fetch(`https://t3a2-server-production.up.railway.app/carts/${cartId}`)
-      const data = await res.json()
-      setReadyCart(data.items)
-    }
-    fetchReadyCart()
+    fetchCart()
   }, [])
 
   // calculate the total payable
   useEffect(() => {
-    readyCart.forEach(item => {
-      const sub = item.quantity * item.price
-      sum.push(sub)
-    })
-    const result = sum.reduce((partialSum, additional) => partialSum + additional, 0)
+    const result = calcTotal()
     setFinalTotal(result)
   })
 
@@ -66,8 +54,9 @@ const Checkout = ({ cartId }) => {
 
   const nav = useNavigate()
 
-  // create and save the input address and then create a new order
+  // create and save the input address and then create a new order with the address, cart, and total payable info
   async function createOrder(newAddr) {
+    // create new address
       const savedAddress = await fetch(`https://t3a2-server-production.up.railway.app/orders/address`, {
       method: "POST",
       headers: {
@@ -79,6 +68,7 @@ const Checkout = ({ cartId }) => {
     const addressReturn = await savedAddress.json()
     const addressId = addressReturn._id
 
+    // create a new order
     const newOrder = {
       addressId: addressId,
       total: finalTotal,
@@ -226,7 +216,7 @@ const Checkout = ({ cartId }) => {
             <div className="col-4 themed-grid-col"><h4 style={textStyle}>Subtotal</h4></div>
           </div>
 
-          {readyCart.map(item => <div key={item.product} className="row mb-3 text-center" ><Summary item={item}/></div>)}
+          {cart.map(item => <div key={item.product} className="row mb-3 text-center" ><Summary item={item}/></div>)}
 
           <hr className="my-4"/>
           <h4 style={textStyle} className="mb-3">Total Payable: ${finalTotal}</h4>

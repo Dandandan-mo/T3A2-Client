@@ -6,7 +6,7 @@ import Checkout from "../src/components/Checkout"
 
 const cartId = "asdf2adfe5344f"
 
-const readyCart = [
+const cart = [
     {
         product: "product1",
         price: 5,
@@ -23,7 +23,7 @@ const readyCart = [
 
 const fakeCart = {
     _id: cartId,
-    items: readyCart,
+    items: cart,
     __v: 0
 }
 

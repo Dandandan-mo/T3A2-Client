@@ -3,37 +3,23 @@ import MediaQuery from 'react-responsive'
 import { useNavigate } from 'react-router-dom'
 import AddedProduct from './AddedProduct'
 
-const Cart = ({cart, setCart, cartId}) => {
+const Cart = ({cart, setCart, cartId, calcTotal, fetchCart}) => {
 
   const nav = useNavigate()
   const [total, setTotal] = useState(0)
 
-  // fetch cart data from db with the cartId saved in local storage
+  // fetch cart dat
   useEffect(() => {
-    async function fetchCart() {
-      if (cartId) {
-      const res = await fetch(`https://t3a2-server-production.up.railway.app/carts/${cartId}`)
-      const data = await res.json()
-      setCart(data.items)
-      } else {
-        setCart([])
-      }
-    }
     fetchCart()
   }, [])
 
   // When cart is updated, update the total payable
   useEffect(() => {
-    const subtotals = []
-    cart.forEach(item => {
-      const subtotal = item.price * item.quantity
-      subtotals.push(subtotal)
-    })
-    const payable = subtotals.reduce((partialSum, additional) => partialSum + additional, 0)
+    const result = calcTotal()
 
     // if total is NaN due to invalid quantity input from user, display "--" as placeholder for total payable
     if (total !== "--") {
-    setTotal(payable)
+    setTotal(result)
     } else {
       setTotal("--")
     }
