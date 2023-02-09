@@ -31,12 +31,14 @@ global.fetch = vi.fn(() => Promise.resolve({
     json: () => Promise.resolve(fakeCart)
 }))
 
+const calcTotal = vi.fn()
+
 // Unit test for the Checkout Component: test that the input validation works
 describe('Checkout Component', () => {
     let container
 
     beforeEach(function() {
-        container = render(<BrowserRouter><Checkout cartId={cartId}/></BrowserRouter>).container
+        container = render(<BrowserRouter><Checkout cartId={cartId} cart={fakeCart.items} fetchCart={global.fetch} calcTotal={calcTotal}/></BrowserRouter>).container
     })
     it('Should render all the fields for address', () => {
         expect(container.querySelector('#email')).toBeInTheDocument()
