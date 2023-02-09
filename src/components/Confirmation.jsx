@@ -33,7 +33,7 @@ const Confirmation = ({setCart}) => {
         <p style={paragraphStyling}>Products will be shipped within 2-3 business days upon receiving your order. </p>
         <h4 style={headingStyling}>Shipping Information</h4>
         <p style={paragraphStyling}>If you only purchase stickers, domestic orders are shipped as standard UNTRACKED letter mail to maintain low shipping costs for customers.</p>
-          <ul>
+          <ul style={{margin: "1rem"}}>
             <li>If you purchase things other than stickers, domestic orders are shipped as TRACKED parcels with higher shipping fee.</li>
             <li>International orders are shipped with tracking number. </li>
             <li>Options for standard tracked letter & express post are available.</li>
