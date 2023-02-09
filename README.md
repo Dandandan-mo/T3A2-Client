@@ -12,7 +12,7 @@
 
 ---
 
-* Frontend: [Frontend Deployment](https://t3a2-client-production-c5c0.up.railway.app/)
+* Frontend: [Frontend Deployment](https://t3a2-client-production.up.railway.app/)
   
 * Backend: [Backend Deployment](https://t3a2-server-production.up.railway.app/)
   

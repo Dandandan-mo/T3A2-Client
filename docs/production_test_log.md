@@ -69,37 +69,27 @@ Have not developed due to time limits.
 
 ## Screenshots of website (Responsive)
 
-* Home page
-  ![Home page](Production_screenshots/Home%20Page%20-%20Desktop.png)
-  ![Home page](Production_screenshots/Home%20Page%20-%20Tablet.png)
-  ![Home page](Production_screenshots/Products%20Page%20-%20Mobile.png)
-
-* Search function
-
-  ![Search function](Production_screenshots/Search%20Function.png)
+* Home page (search function shown in desktop viewport)
+  ![Home page](Production_screenshots/home-m.png)
+  ![Home page](Production_screenshots/home-t.png)
+  ![Home page](Production_screenshots/home-d.png)
   
 * Products page
-  ![Products page](Production_screenshots/Products%20Page%20-%20Desktop.png)
-  ![Products page](Production_screenshots/Products%20Page%20-%20Tablet.png)
-  ![Products page](Production_screenshots/Products%20Page%20-%20Mobile.png)
+  ![Products page](Production_screenshots/product-m.png)
+  ![Products page](Production_screenshots/product-t.png)
+  ![Products page](Production_screenshots/product-d.png)
 
-* Cart page
-  ![Cart page](Production_screenshots/Cart%20Page%20-%20Desktop.png)
-  ![Cart page](Production_screenshots/Cart%20Page%20-%20Tablet.png)
-  ![Cart page](Production_screenshots/Cart%20Page%20-%20Mobile.png)
-
-* Quantity validation
-  ![Quantity validation](Production_screenshots/Quantity%20Validation.png)
+* Cart page (quantity validation shown in mobile and tablet viewports)
+  ![Cart page](Production_screenshots/cart-m.png)
+  ![Cart page](Production_screenshots/cart-t.png)
+  ![Cart page](Production_screenshots/cart-d.png)
   
-* Checkout page
-  ![Checkout page](Production_screenshots/Checkout%20Page%20-%20Desktop.png)
-  ![Checkout page](Production_screenshots/Checkout%20Page%20-%20Tablet.png)
-  ![Checkout page](Production_screenshots/Checkout%20Page%20-%20Mobile.png)
-
-* Input validation
-  ![Input validation](Production_screenshots/Input%20Validation.png)
+* Checkout page (input validation shown in tablet viewport)
+  ![Checkout page](Production_screenshots/checkout-m.png)
+  ![Checkout page](Production_screenshots/checkout-t.png)
+  ![Checkout page](Production_screenshots/checkout-d.png)
 
 * Confirmation page
-  ![Confirmation page](Production_screenshots/Confirmation%20Page%20-%20Desktop.png)
-  ![Confirmation page](Production_screenshots/Confirmation%20Page%20-%20Tablet.png)
-  ![Confirmation page](Production_screenshots/Confirmation%20Page%20-%20Mobile.png)
+  ![Confirmation page](Production_screenshots/confirmation-m.png)
+  ![Confirmation page](Production_screenshots/confirmation-t.png)
+  ![Confirmation page](Production_screenshots/confirmation-d.png)
