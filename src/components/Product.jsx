@@ -41,10 +41,10 @@ const Product = ({product, addProductToCart, cartId, setCartId}) => {
             <Carousel imageLinks={product.imageLinks}/>
         </div>
         <div style={{margin:"2rem"}}>
-          <h2 className="product-detail-name" style={{fontSize: "6.5vw", fontFamily: "'Patrick Hand', cursive"}}>{product.name}</h2>
-          <h3 className="product-detail-price" style={{fontSize:"5vw", fontFamily: "'Patrick Hand', cursive"}}>Price: $ {product.price}</h3>
-          <p className="detail-description" style={{fontSize:"3.25vw"}}>{product.description}</p>
-          <button id="add-product"onClick={addProduct} type="button" className="btn btn-info" style={{fontSize:"5vw", fontFamily: "'Patrick Hand', cursive"}}>Add to Cart</button>
+          <h2 className="product-detail-name" style={{fontSize: "2.5rem", fontFamily: "'Patrick Hand', cursive"}}>{product.name}</h2>
+          <h3 className="product-detail-price" style={{fontSize:"2rem", fontFamily: "'Patrick Hand', cursive"}}>Price: $ {product.price}</h3>
+          <p className="detail-description" style={{fontSize:"1.25rem"}}>{product.description}</p>
+          <button id="add-product"onClick={addProduct} type="button" className="btn btn-info" style={{fontSize:"2rem", fontFamily: "'Patrick Hand', cursive"}}>Add to Cart</button>
         </div>
     </MediaQuery>
     <MediaQuery minWidth={1200}>
@@ -53,10 +53,10 @@ const Product = ({product, addProductToCart, cartId, setCartId}) => {
             <Carousel imageLinks={product.imageLinks}/>
         </div>
         <div style={{width:'45vw', marginRight:'50px'}}>
-          <h2 className="product-detail-name" style={{fontSize: "2.5vw", fontFamily: "'Patrick Hand', cursive"}}>{product.name}</h2>
-          <h3 className="product-detail-price" style={{fontSize:"1.75vw", fontFamily: "'Patrick Hand', cursive"}}>Price: $ {product.price}</h3>
-          <p className="detail-description" style={{fontSize:"1.25vw", marginBottom:"3em"}}>{product.description}</p>
-          <button id="add-product"onClick={addProduct} type="button" className="btn btn-info" style={{fontSize:"1.75vw", fontFamily: "'Patrick Hand', cursive"}}>Add to Cart</button>
+          <h2 className="product-detail-name" style={{fontSize: "3rem", fontFamily: "'Patrick Hand', cursive"}}>{product.name}</h2>
+          <h3 className="product-detail-price" style={{fontSize:"2.5rem", fontFamily: "'Patrick Hand', cursive"}}>Price: $ {product.price}</h3>
+          <p className="detail-description" style={{fontSize:"1.25rem", marginBottom:"3em"}}>{product.description}</p>
+          <button id="add-product"onClick={addProduct} type="button" className="btn btn-info" style={{fontSize:"2rem", fontFamily: "'Patrick Hand', cursive"}}>Add to Cart</button>
         </div>
       </div>
     </MediaQuery>

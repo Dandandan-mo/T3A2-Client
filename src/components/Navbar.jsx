@@ -22,9 +22,9 @@ const viewWidth = () => {
 
   const changeFontSize =() => {
   if (isDesktop) {
-    textStyle.fontSize = "1.75rem"
+    textStyle.fontSize = "2rem"
   } else if (isTablet) {
-    textStyle.fontSize = "1.5rem"
+    textStyle.fontSize = "1.75rem"
   } 
 }
   changeFontSize()
