@@ -13,22 +13,22 @@ const viewWidth = () => {
     { minWidth: 1200},   
   )
 
-  const isMobile = useMediaQuery(
-    { minWidth: 800}
-  )
+
+  const textStyle = {
+    fontSize: "6vw",
+    fontFamily: "'Patrick Hand', cursive"
+  }
 
 const changeFontSize =() => {
   if (isDesktop) {
-    style= {fontSize:"2vw"}
+    textStyle.fontSize = "2vw"
   } else if (isTablet) {
-    style= {fontSize:"3vw"}
-  } else {
-    style= {fontSize:"6vw"}
-  }
+    textStyle.fontSize = "3vw"
+  } 
 }
   changeFontSize()
    
-  return style
+  return textStyle
 }
 
 const Album = ({imageLink, name, price, id }) => {

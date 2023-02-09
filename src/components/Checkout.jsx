@@ -5,6 +5,11 @@ import Summary from './Summary'
 
 const textStyle = {
   textAlign:"center",
+  fontFamily: "'Patrick Hand', cursive"
+}
+const buttonStyle = {
+  fontFamily: "'Patrick Hand', cursive",
+  fontSize: "1.5rem"
 }
 const newAddress = {
   email: "",
@@ -109,7 +114,7 @@ const Checkout = ({ cartId }) => {
       <h2 style={textStyle}>Checkout Form</h2>
       <div className="container py-5 bg-light">
         <div className="col-md-12 col-lg-12">
-        <h4 className="mb-3" style={textStyle}>Billing address</h4>
+        <h3 className="mb-3" style={textStyle}>Billing address</h3>
         <form onSubmit={handleSubmit(toConfirmation)} noValidate>
           <div className="row g-3">
           <div className="col-6">
@@ -214,20 +219,20 @@ const Checkout = ({ cartId }) => {
           </div>
           <hr className="my-4"/>
 
-          <h4 className="mb-3" style={textStyle}>Summary</h4>
+          <h3 className="mb-3" style={textStyle}>Summary</h3>
           <div className="row mb-3 text-center">
-            <div className="col-4 themed-grid-col "><h5>Product</h5></div>
-            <div className="col-4 themed-grid-col"><h5>Quantity</h5></div>
-            <div className="col-4 themed-grid-col"><h5>Subtotal</h5></div>
+            <div className="col-4 themed-grid-col"><h4 style={textStyle}>Product</h4></div>
+            <div className="col-4 themed-grid-col"><h4 style={textStyle}>Quantity</h4></div>
+            <div className="col-4 themed-grid-col"><h4 style={textStyle}>Subtotal</h4></div>
           </div>
 
           {readyCart.map(item => <div key={item.product} className="row mb-3 text-center" ><Summary item={item}/></div>)}
 
           <hr className="my-4"/>
-          <h4 className="mb-3">Total Payable: ${finalTotal}</h4>
+          <h4 style={textStyle} className="mb-3">Total Payable: ${finalTotal}</h4>
 
-          <button className="w-100 btn btn-warning btn-lg" type="submit" id="submit">Place Order</button>
-          <button onClick={backToCart} className="w-100 btn mt-3 btn-primary btn-lg">Back to Cart</button>
+          <button style={buttonStyle} className="w-100 btn btn-warning btn-lg" type="submit" id="submit">Place Order</button>
+          <button style={buttonStyle} onClick={backToCart} className="w-100 btn mt-3 btn-info btn-lg">Back to Cart</button>
         </form>
       </div>
     </div>

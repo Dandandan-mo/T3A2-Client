@@ -9,11 +9,11 @@ const Contact = () => {
 <>
 <div className="container" >
   <footer className="py-3 my-5">
-    <h3 className="text-center text-muted mb-4">Contact Us</h3>
+    <h3 className="text-center text-muted mb-4" style={{fontFamily: "'Patrick Hand', cursive"}}>Contact Us</h3>
     <ul className="nav justify-content-center pb-3 mb-2">
       <li className="ms-3"><span className="text-center text-muted"><img src={Email} className="bi" width="24" height="24"></img> smoonypaws@gmail.com</span></li>
     </ul>
-    <h6 className="text-center text-muted mb-3">Follow us on social media:</h6>
+    <h5 className="text-center text-muted mb-3" style={{fontFamily: "'Patrick Hand', cursive"}}>Follow us on social media:</h5>
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
       <li className="ms-3"><a className="text-muted" href="https://twitter.com/Smoonypaws"><img src={Twitter} className="bi" width="24" height="24"></img></a></li>
       <li className="ms-3"><a className="text-muted" href="https://www.instagram.com/smoonypaws/"><img src={IG} className="bi" width="24" height="24"></img></a></li>

@@ -3,8 +3,6 @@ import { useMediaQuery } from 'react-responsive'
 import Album from './Album'
 import { useState } from 'react'
 
-
-
 const viewWidth = () => {
 
   const isTablet = useMediaQuery(
@@ -15,13 +13,11 @@ const viewWidth = () => {
     { minWidth: 1200},   
   )
 
-  const isMobile = useMediaQuery(
-    { minWidth: 800}
-  )
   const textStyle = {
     textAlign:"center",
     margin: "20px",
-    fontSize:"6vw"
+    fontSize:"6vw",
+    fontFamily: "'Patrick Hand', cursive"
   }
 
   const paragraphStyle ={
@@ -31,15 +27,12 @@ const viewWidth = () => {
 
   const changeFontSize =() => {
   if (isDesktop) {
-    textStyle.fontSize = "2vw"
+    textStyle.fontSize = "3vw"
     paragraphStyle.fontSize = "1.5vw"
   } else if (isTablet) {
-    paragraphStyle.fontSize = "3vw"
+    paragraphStyle.fontSize = "2.5vw"
     textStyle.fontSize = "4vw"
-  } else {
-    textStyle.fontSize = "6vw"
-    paragraphStyle.fontSize = "4vw"
-  }
+  } 
 }
   changeFontSize()
    

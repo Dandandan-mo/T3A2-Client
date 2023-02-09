@@ -84,7 +84,7 @@ const AddedProduct = ({item, setCart, setTotal, cartId}) => {
                   className="img-fluid rounded-3" alt="Product-image"/>
               </div>
               <div className="col-md-3 col-lg-3 col-xl-2">
-                <p className="lead fw-normal mb-2" id="product-name-in-cart">{item.product}</p>
+                <p style={{fontFamily: "'Patrick Hand', cursive", fontSize: "1.5rem"}}className="lead fw-normal mb-2" id="product-name-in-cart">{item.product}</p>
                 <p id="product-price-in-cart"><span className="text-muted">Price: </span>$ {item.price} </p>
               </div>
               <div className="col-md-3 col-lg-3 col-xl-3">
@@ -94,7 +94,7 @@ const AddedProduct = ({item, setCart, setTotal, cartId}) => {
 
               </div>
               <div className="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
-                <h5 id="cart-subtotal" className="mt-3">Subtotal: ${isNaN(quantity) ? "--" : item.price * quantity}</h5>
+                <h4 style={{fontFamily: "'Patrick Hand', cursive"}} id="cart-subtotal" className="mt-3">Subtotal: ${isNaN(quantity) ? "--" : item.price * quantity}</h4>
               </div>
               <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                 <button onClick={deleteProduct} className="btn btn-link px-2"><img src={Trash} width="30vh" alt="trash-icon" id="delete-product-in-cart"/></button>
